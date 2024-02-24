@@ -1,12 +1,13 @@
+import { useEffect, useState } from 'react'
 import './App.css'
 import PlantProfile from './components/PlantProfile'
 
 function App() {
-
   return (
     <>
       Hello
       <PlantProfile />
+     
     </>
   )
 }
