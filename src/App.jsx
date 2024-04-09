@@ -1,15 +1,28 @@
-import { useEffect, useState } from 'react'
-import './App.css'
-import PlantProfile from './components/PlantProfile'
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Outlet
+} from 'react-router-dom';
+
+import Register from './components/Register';
+import Login from './components/Login';
+import Dashboard from './components/DashBoard';
+import PlantProfile from './components/PlantProfile';
+
+import './App.css';
 
 function App() {
+
   return (
-    <>
-      Hello
-      <PlantProfile />
-     
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Register />}></Route>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/plant-profile" element={<PlantProfile />}></Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

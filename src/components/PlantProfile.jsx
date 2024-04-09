@@ -24,28 +24,28 @@ export default function PlantProfile() {
   const [plantInfo, setPlantInfo] = useState();
 
   useEffect(() => {
-    fetch(`https://perenual.com/api/species-list?key=${apiKey}`)
+    fetch(`https://perenual.com/api/species/details/1?key=${apiKey}`)
         .then(response => response.json())
         .then(plantData => {
             setPlantInfo(plantData);
             console.log(plantData)
         })
-  },[plant]);
+  },[]);
   return (
     <Card>
       <CardContent>
         <Avatar sx={{ margin: "auto auto" }}>
           <YardIcon />
         </Avatar>
-        <Typography>This is a plant</Typography>
+        <Typography></Typography>
         <Stack>
           <Box sx={{ display: "flex" }}>
             <WbSunnyIcon />
-            <Typography>Sunlight</Typography>
+            <Typography></Typography>
           </Box>
           <Box sx={{ display: "flex" }}>
             <WaterDropIcon />
-            <Typography>Water</Typography>
+            <Typography></Typography>
           </Box>
         </Stack>
       </CardContent>
