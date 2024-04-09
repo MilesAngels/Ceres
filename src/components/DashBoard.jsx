@@ -1,5 +1,6 @@
+import PlantProfile from "./PlantProfile"
 export default function Dashboard() {
     return(
-        <h1>Dashboard</h1>
+        <PlantProfile/>
     )
 }

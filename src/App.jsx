@@ -19,6 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Register />}></Route>
         <Route path="/login" element={<Login />}></Route>
+        <Route path="/dashboard" element={<Dashboard />}></Route>
         <Route path="/plant-profile" element={<PlantProfile />}></Route>
       </Routes>
     </BrowserRouter>

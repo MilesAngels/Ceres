@@ -12,43 +12,31 @@ export default function Login() {
   const [email, setEmail] = useState("");
 
   // Submit registration form
-  const handleRegister = async() => {
+  const handleRegister = async () => {
     const data = await register(fName, lName, email, userName, password);
     console.log(data);
 
     // JWT
-    if(!data.error) {
-      localStorage.setItem('jwt', data.data.jwt);
-      navigate()
+    if (!data.error) {
+      localStorage.setItem("jwt", data.data.jwt);
+      navigate();
     }
-  } 
+  };
 
   return (
     <div className="form-container">
-      <h2>Register to Ceres</h2>
-      <form id="registration-form">
-        <div className="form-group">
-          <label htmlFor="firstname">First Name:</label>
-          <input type="text" id="firstname" name="firstname" required />
-        </div>
-        <div className="form-group">
-          <label htmlFor="lastname">Last Name:</label>
-          <input type="text" id="lastname" name="lastname" required />
-        </div>
+      <h2>User Login</h2>
+      <form id="login-form">
         <div className="form-group">
           <label htmlFor="username">Username:</label>
           <input type="text" id="username" name="username" required />
-        </div>
-        <div className="form-group">
-          <label htmlFor="email">Email:</label>
-          <input type="email" id="email" name="email" required />
         </div>
         <div className="form-group">
           <label htmlFor="password">Password:</label>
           <input type="password" id="password" name="password" required />
         </div>
         <div className="form-group">
-          <button type="submit">Submit</button>
+          <button type="submit">Login</button>
         </div>
       </form>
     </div>

@@ -35,17 +35,17 @@ export default function PlantProfile() {
     <Card>
       <CardContent>
         <Avatar sx={{ margin: "auto auto" }}>
-          <YardIcon />
+          <img src={plantInfo.default_image.thumbnail}/>
         </Avatar>
-        <Typography></Typography>
+        <Typography>{plantInfo.common_name}</Typography>
         <Stack>
           <Box sx={{ display: "flex" }}>
             <WbSunnyIcon />
-            <Typography></Typography>
+            <Typography>{plantInfo.sunlight}</Typography>
           </Box>
           <Box sx={{ display: "flex" }}>
             <WaterDropIcon />
-            <Typography></Typography>
+            <Typography>{plantInfo.watering}</Typography>
           </Box>
         </Stack>
       </CardContent>
